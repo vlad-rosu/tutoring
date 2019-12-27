@@ -2,22 +2,22 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 
-app.use(express.static('/styles.css'));
+app.use(express.static('.'));
 
 router.get('/about',function(req,res){
-  res.sendFile(__dirname+'/views/about.html');
+  res.sendFile(__dirname+'/about.html');
 });
 
 router.get('/qualifications',function(req,res){
-  res.sendFile(__dirname+'/views/qualifications.html');
+  res.sendFile(__dirname+'/qualifications.html');
 });
 
 router.get('/contact',function(req,res){
-  res.sendFile(__dirname+'/views/contact.html');
+  res.sendFile(__dirname+'/contact.html');
 });
 
 router.get('*',function(req,res){
-  res.sendFile(__dirname+'/views/about.html');
+  res.sendFile(__dirname+'/about.html');
 });
 
 //add the router
